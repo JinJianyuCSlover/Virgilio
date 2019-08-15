@@ -1,7 +1,7 @@
-# The Data Science Project lifecycle
+# The Data Science Process lifecycle
 
 # What you will learn 
-In this guide you will understand the big picture of the Data Science project lifecycle, why and how to perform each step, from getting the data to putting predictive models in production. You can then use this guide as a "checklist" of to-do steps to perform during your projects. 
+In this guide you will understand the big picture of the Data Science project lifecycle, why and how to perform each step, from collecting the data to putting predictive models in production. You can then use this guide as a "checklist" of to-do steps to perform during your projects. 
 
 ## Prerequisites
 There are no prerequisites for this guide.
@@ -14,8 +14,8 @@ There are no prerequisites for this guide.
 - [Looking at the big picture](#Looking-at-the-big-picture)
   - [Frame the problem](#Frame-the-problem)
   - [Tools that can help in the definition of the problem](#Tools-that-can-help-in-the-definition-of-the-problem)
-  - [Select a performance measure](#Select-a-performance-measure)
-  - [Check the assumptions](#Check-the-assumptions)
+  - [Select a performance metric](#Select-a-performance-metric)
+  - [Check your assumptions](#Check-your-assumptions)
 - [Get the data](#Get-the-data)
   - [Create the workspace](#Create-the-workspace)
   - [Download the data](#Download-the-data)
@@ -24,6 +24,8 @@ There are no prerequisites for this guide.
 - [Prepare the data for machine mearning algorithms](#Prepare-the-data-for-machine-mearning-algorithms)
   - [Data cleaning](#Data-cleaning)
   - [Numerical vs Categorical attributes](#Numerical-vs-Categorical-attributes)
+  - [Feature Engineering](#Feature-engineering)
+  - [Feature Selection](#Feature-selection)
   - [Transformation pipelines](#Transformation-pipelines)
 - [Select and train a model](#Select-and-train-a-model)
   - [Training and evaluating on test set](#Training-and-evaluating-on-test-set)
@@ -33,7 +35,7 @@ There are no prerequisites for this guide.
   - [Ensemble methods](#Ensemble-methods)
   - [Evaluate on test set](#Evaluate-on-test-set)
 - [Launch and mantain the system](#Launch-and-mantain-the-system)
-- [Iterate baby!](#Iterate baby!)
+- [Iterate baby!](#Iterate-baby!)
 
 
 Let's dive right in!
@@ -74,8 +76,7 @@ history" of the data, a very important step for the success of a project.
 
 ### Tools that can help in the definition of the problem
 
-The definition of the problem is the phase of the Data Science process that more than any other depends on soft skills (compared to technological skills or hard skills), however, since it is based on questions and data, sometimes in large quantities, can be
-A data analysis tool is useful.
+The definition of the problem is the phase of the Data Science process that more than any other depends on soft skills (compared to technological skills or hard skills), however, since it is based on questions and data, sometimes in large quantities, a data analysis tool can be useful.
 
 At this stage of the project, a key factor is the collaboration between data scientists and business users who, ultimately, are those with the most extensive knowledge in the field and are therefore those who will pave the way for success. From our experience, this collaboration is facilitated by data visualization tools. 
 
@@ -87,9 +88,9 @@ As mentioned above, we must bear in mind that a Data Science project must always
 
 In this regard, I would like to point out the project concept [S.M.A.R.T.](https://www.getorganizedwizard.com/smart-goals/an-overview-of-smart-project-management/), which helps to frame the problem and encourages wise evaluations during this phase.
 
-Machine learning projects must have short-term objectives and be managed with an agile approach: the recirculation of questions, hypotheses and related data must be continuous, new discoveries must be used to guide and improve subsequent series of projects and results, even partial, must be shared with stakeholders (the business, colleagues, or simply those interested).
+Data Science projects must have short-term objectives and be managed with an agile approach: the recirculation of questions, hypotheses and related data must be continuous, new discoveries must be used to guide and improve subsequent series of projects and results, even partial, must be shared with stakeholders (the business, colleagues, or simply those interested).
 
-### Select a performance measure
+### Select a performance metric
 
 Choosing the appropriate metrics to measure the performance of a model is critical to effectively solve a problem through a Machine Learning approach. 
 
@@ -97,9 +98,9 @@ Once the type of problem to be solved has been identified, it will be clear whet
 
 The first type of problem, where the output of the system I want to build is a number, is called **regression**, while the second is called **classification**.
 
-In Machine Learning problems, we are interested in measuring the performance of our system based on "how much is wrong" with respect to the correct output.
+In Data Science problems, we are interested in measuring the performance of our system based on "how much is wrong" with respect to the correct output.
 
-In the case of regression problems, this measure of the error corresponds to the distance between the predicted value and the correct value, while in the case of classification problems it corresponds to measuring a concept called entropy between the aforesaid classes. 
+In the case of regression problems, this measure of the error corresponds to _some kind of distance_ between the predicted value and the correct value, while in the case of classification problems the errore can be measured as the number of true prediction versus the number of total predictions.
 
 Don't worry if it sounds strange to you for now, we will deal with these concepts in subsequent guides. For now, it is enough to know that every time you start a ML project, it is essential to study the evaluation metrics of the final system.
 
@@ -108,4 +109,4 @@ Keep it under your pillow, we'll need it soon!
 
 (Parts [1](https://towardsdatascience.com/how-to-select-the-right-evaluation-metric-for-machine-learning-models-part-1-regrression-metrics-3606e25beae0), [2](https://towardsdatascience.com/how-to-select-the-right-evaluation-metric-for-machine-learning-models-part-2-regression-metrics-d4a1a9ba3d74), [3](https://towardsdatascience.com/how-to-select-the-right-evaluation-metric-for-machine-learning-models-part-3-classification-3eac420ec991))
 
-### Check the assumptions
+### Check your assumptions
